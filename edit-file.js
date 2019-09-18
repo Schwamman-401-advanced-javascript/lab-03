@@ -18,7 +18,7 @@ fs.readFile(file, (err, data) => {
     if (err) throw err;
     console.log('Written to file!');
   });
-})
+});
 
 function modifyData() {
   dataArray[0].firstName = 'Jack';

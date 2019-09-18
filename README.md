@@ -5,10 +5,8 @@
 ### Author: Jonathon Schwamman
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [submission PR](https://github.com/Schwamman-401-advanced-javascript/lab-03/pull/1)
+* [travis](https://www.travis-ci.com/Schwamman-401-advanced-javascript/lab-03)
 
 #### Documentation
 * [fs](https://nodejs.org/api/fs.html) (FS Documentation)
@@ -24,9 +22,7 @@ Usage Notes or examples
 Usage Notes or examples
 
 ### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+npm install
 
 #### Running the app
 * `npm start`
