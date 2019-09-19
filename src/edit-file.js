@@ -2,15 +2,16 @@
 
 const fs = require('fs');
 const modifyData = require('./modifier');
+const readFileAsObject = require('./read-file-as-object');
 
 const file = process.argv[2];
 const dataArray = [];
 
 //Reads and modifies data in file passed in from console
 
-fs.readFile(file, (err, data) => {
+readFileAsObject(file, (err, object) => {
   if (err) throw err;
-  dataArray.push(JSON.parse(data));
+  dataArray.push(object);
 
   console.log(dataArray);
 
