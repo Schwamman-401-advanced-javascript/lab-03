@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs');
+const modifyData = require('./modifier');
 const promisify = require('./util/promisify');
 
 const file = process.argv[2];
@@ -14,19 +15,9 @@ promiseToRead(file)
   .then(data => {
     dataArray.push(JSON.parse(data));
     console.log(dataArray);
-    modifyData();
+    modifyData(dataArray);
   })
   .then(() => writeFile(file, JSON.stringify(dataArray)))
   .catch(err => {
     console.log(err);
   });
-
-function modifyData() {
-  dataArray[0].firstName = 'Jack';
-  dataArray[0].lastName = 'Sparrow';
-  dataArray[0].hair.type = 'long';
-  dataArray[0].favoriteFoods = 'Rum';
-  console.log(dataArray);
-}
-
-
