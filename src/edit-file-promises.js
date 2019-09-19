@@ -1,7 +1,7 @@
 'use strict';
 
 const fs = require('fs');
-const promisify = require('./promisify');
+const promisify = require('./util/promisify');
 
 const file = process.argv[2];
 const dataArray = [];
