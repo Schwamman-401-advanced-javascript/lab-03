@@ -3,7 +3,7 @@
 const fs = require('fs');
 const modifyData = require('./modifier');
 const readFileAsObject = require('./read-file-as-object');
-const writeFile = require('./write-file.js');
+const writeFile = require('./write-file');
 
 const fileLocation = process.argv[2];
 
@@ -15,15 +15,15 @@ function editFile(file) {
     const dataArray = [];
     if (err) throw err;
     dataArray.push(object);
+    console.log(dataArray);
     modifyData(dataArray);
-    writeFile(file, dataArray, (err, object) => {
+    writeFile(file, dataArray, (err, updatedData) => {
       if (err) throw err;
-      return object;
     });
   });
 }
 
 editFile(fileLocation);
 
-module.export = editFile;
+module.exports = editFile;
 

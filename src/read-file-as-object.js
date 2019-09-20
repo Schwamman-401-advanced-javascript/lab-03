@@ -6,13 +6,10 @@ function readFileAsObject(filename, callback) {
       callback(err);
       return;
     }
-
     try {
-
-      var object = JSON.parse(data);
+      var object = JSON.parse(data)[0];
       // "return" the object to the callback
       callback(null, object);
-
     } catch (parseErr) {
       callback(parseErr);
     }

@@ -8,7 +8,6 @@ function modifyData(dataArray) {
   dataArray[0].lastName = 'Sparrow';
   dataArray[0].hair.type = 'long';
   dataArray[0].favoriteFoods = 'Rum';
-  console.log(dataArray);
 }
 
 module.exports = modifyData;
