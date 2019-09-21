@@ -14,7 +14,6 @@ function writeFile(file, dataArray, callback) {
     } catch (parseErr) {
       callback(parseErr);
     }
-    console.log('Written to file!');
   });
 }
 

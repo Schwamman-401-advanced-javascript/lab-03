@@ -17,7 +17,7 @@ describe('modifier', () => {
     ];
 
     // Act
-    modifier(data);
+    modifier(data, 'Jack', 'Sparrow');
 
     // Assert
     /*
@@ -34,8 +34,8 @@ describe('modifier', () => {
       {
         firstName: 'Jack',
         lastName: 'Sparrow',
-        hair: { type: 'long' },
-        favoriteFoods: 'Rum',
+        hair: { type: 'boring' },
+        favoriteFoods: 'F4',
         pets: [],
       },
       {
@@ -53,5 +53,5 @@ describe('modifier', () => {
 
     // Assert
     expect(data).toEqual([]);
-  })
+  });
 });

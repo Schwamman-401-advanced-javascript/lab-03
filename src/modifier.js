@@ -1,13 +1,11 @@
 
-function modifyData(dataArray) {
+function modifyData(dataArray, firstName, lastName) {
   if (dataArray.length === 0) {
     return;
   }
 
-  dataArray[0].firstName = 'Jack';
-  dataArray[0].lastName = 'Sparrow';
-  dataArray[0].hair.type = 'long';
-  dataArray[0].favoriteFoods = 'Rum';
+  dataArray[0].firstName = firstName;
+  dataArray[0].lastName = lastName;
 }
 
 module.exports = modifyData;

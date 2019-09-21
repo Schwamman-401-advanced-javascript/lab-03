@@ -13,12 +13,15 @@ describe('editFile', () => {
       originalData.push(result);
     });
 
-    editFile(file);
+    editFile(file, '123456', 'Scissorhands');
 
     readFileAsObject(file, (err, result) => {
       if (err) throw err;
       updatedData.push(result);
-    });    
+      
+    });  
+    
+    editFile(file, 'Edward', 'Scissorhands');
 
   });
 });
